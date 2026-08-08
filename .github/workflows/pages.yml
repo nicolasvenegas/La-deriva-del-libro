@@ -3,6 +3,7 @@ name: Deploy Pages
 on:
   push:
     branches:
+      - main
       - "Edición-1"
       - "Edición-2"
   workflow_dispatch:
@@ -20,6 +21,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout hub (main)
+        uses: actions/checkout@v4
+        with:
+          ref: "main"
+          path: hub
+
       - name: Checkout Edición-1
         uses: actions/checkout@v4
         with:
@@ -32,12 +39,14 @@ jobs:
           ref: "Edición-2"
           path: edicion-2
 
-      - name: Generar sitio único (Ed.1 en raíz + Ed.2 en /edicion-2/)
+      - name: Generar sitio (hub en raíz + /edicion-1/ + /edicion-2/)
         run: |
           mkdir -p _site
-          rsync -a --exclude '.git' --exclude '.github' edicion-1/ _site/
+          rsync -a --exclude '.git' --exclude '.github' hub/ _site/
+          mkdir -p _site/edicion-1
+          rsync -a --exclude '.git' --exclude '.github' edicion-1/ _site/edicion-1/
+          mkdir -p _site/edicion-2
           rsync -a --exclude '.git' --exclude '.github' edicion-2/ _site/edicion-2/
-          rm -rf _site/*.md
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
