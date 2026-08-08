@@ -6,6 +6,14 @@ on:
       - main
       - "Edición-1"
       - "Edición-2"
+    paths:
+      - "index.html"
+      - "README.md"
+      - "_config.yml"
+      - "style.css"
+      - "sketch_*.js"
+      - "libraries/**"
+      - "entrevistas/**"
   workflow_dispatch:
 
 permissions:
