@@ -1,82 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La deriva del libro — Edición 2</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0d0d0f;
-      color: #fafafa;
-      font-family: 'Inter', sans-serif;
-      overflow: hidden;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(100,100,255,.18), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(100,255,180,.12), transparent 40%);
-    }
-    .wrapper { position: relative; z-index: 1; text-align: center; padding: 2rem; }
-    .badge {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 999px;
-      padding: .4rem 1.1rem;
-      font-size: .75rem;
-      text-transform: uppercase;
-      letter-spacing: .22em;
-      color: #d6d6de;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 600;
-      font-size: clamp(2rem, 6vw, 4.5rem);
-      line-height: 1;
-      letter-spacing: .02em;
-    }
-    .sup { color: #8c8cff; font-size: .4em; vertical-align: super; }
-    hr { width: 3rem; border: 0; border-top: 2px solid #8c8cff; margin: 1.5rem auto; }
-    p { max-width: 36ch; margin: 0 auto 2rem; color: #a9a9b0; line-height: 1.7; font-weight: 300; }
-    a { color: #b4b4ff; }
-    a:hover { text-decoration: underline; }
-    .links a { display: inline-block; margin: 0 .7rem; }
-    .foot {
-      position: absolute;
-      bottom: 1.2rem;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: .72rem;
-      letter-spacing: .1em;
-      color: #6b6b73;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="badge">próximamente · 2026</div>
-    <h1>La deriva<br>del libro<span class="sup">²</span></h1>
-    <hr>
-    <p>Edición 2 en construcción. La deriva continúa: nuevas autorxs, más libros y otras preguntas sobre lo que (nos) hace un libro.</p>
-    <p class="links">
-      <a href="../edicion-1/">← volver a la Edición 1</a>
-      <a href="../">índice de ediciones</a>
-    </p>
-  </div>
-  <div class="foot">Deriva del Libro © 2022–2026</div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La deriva del libro — Edición 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0d0d0f;
+        color: #fafafa;
+        font-family: "Inter", sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(100, 100, 255, 0.18),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(100, 255, 180, 0.12),
+            transparent 40%
+          );
+      }
+      .wrapper {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 999px;
+        padding: 0.4rem 1.1rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: #d6d6de;
+        margin-bottom: 2rem;
+      }
+      h1 {
+        font-family: "Syne", sans-serif;
+        font-weight: 600;
+        font-size: clamp(2rem, 6vw, 4.5rem);
+        line-height: 1;
+        letter-spacing: 0.02em;
+      }
+      .sup {
+        color: #8c8cff;
+        font-size: 0.4em;
+        vertical-align: super;
+      }
+      hr {
+        width: 3rem;
+        border: 0;
+        border-top: 2px solid #8c8cff;
+        margin: 1.5rem auto;
+      }
+      p {
+        max-width: 36ch;
+        margin: 0 auto 2rem;
+        color: #a9a9b0;
+        line-height: 1.7;
+        font-weight: 300;
+      }
+      a {
+        color: #b4b4ff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .links a {
+        display: inline-block;
+        margin: 0 0.7rem;
+      }
+      .foot {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0.72rem;
+        color: #6b6b73;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="badge">próximamente · 2026</div>
+      <h1>La deriva<br />del libro<span class="sup">²</span></h1>
+      <hr />
+      <p>
+        Realidades Expandidas
+      </p>
+      <p class="links">
+        <a href="../edicion-1/">ver edición 1</a>
+        <a href="../">← volver al índice</a>
+      </p>
+    </div>
+    <div class="foot">Los Ojos, estudio tecnocreativo © 2022 – 2026</div>
+  </body>
 </html>
